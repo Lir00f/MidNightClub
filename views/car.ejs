@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title><%= title %></title>
+    
+    <title>
+        <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
+
 <body>
-<h1><%= title %></h1>
-<img src="<%= picture %>" alt=""/>
-<h4>A few words about this car: <%=desc%></h4>
+    <% layout('./layout/page.ejs') %>
+    <h1>
+        <%= title %>
+    </h1>
+    <img src="<%= picture %>" alt="" />
+    <h2>A few words about this car: <%=desc%>
+    </h2>
 </body>
+
 </html>
