@@ -10,10 +10,8 @@ async function run() {
         database.dropDatabase()
         database = client.db("midnightclub");
         const cars = database.collection("cars");
-        const result = await cars.insertOne({name: "Supra"});
-        for (const key in result) {
-            console.log(`${key}: ${result[key]}`);
-            }
+        const result = await cars.insertMany(data);
+        console.log(`${result.insertedCount} documents were inserted`);
     } finally {
         await client.close();
     }
