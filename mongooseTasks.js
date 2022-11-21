@@ -1,15 +1,15 @@
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+mongoose.connect('mongodb://127.0.0.1:27017/test1')
+var Car = require("./models/car").Car
 
-var schema = mongoose.Schema({ name: String })
 
-schema.methods.meow = function(){
-    console.log(this.get("name") + " done 'Sutututu' ")
-}
+var car = new Car({
+title: "Supra",
+nick: "supraa70"
+})
 
-var Car = mongoose.model('Cat', schema)
 
-var jdm = new Car({ name: 'Supra' })
-jdm.save(function (err) {
-    jdm.meow()
+console.log(car)
+car.save(function(err, car, affected){
+console.log(car.title)
 })
