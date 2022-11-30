@@ -16,19 +16,16 @@
     <li class="nav-item">
     <a class="nav-link" href="/">Главная</a>
     </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/cars/supra">Supra</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/cars/nissans130z">Nissan S130z</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/cars/porsche930turbo">Porsche 930 Turbo</a>
-    </li>
     </ul>
+    <% menu.forEach(function(car){ %>
+        <li class="nav-item">
+        <a class="nav-link" href="/cars/<%=car.nick%>">
+            <%=car.title%> </a>
+        </li>
+        <% }) %>
     <ul class="navbar-nav navbar-right">
     <li>
-    <a class="nav-link" href="/logreg">Войти</a>
+    <a class="nav-link" href="/logreg">Log In</a>
     </li>
     </ul>
     </div>
