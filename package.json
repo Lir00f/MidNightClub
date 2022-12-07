@@ -8,11 +8,13 @@
   "dependencies": {
     "async": "^3.2.4",
     "bootstrap": "^5.2.2",
+    "connect-mongo": "^4.6.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "ejs-locals": "^1.0.2",
     "express": "~4.16.1",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "mongoose": "^6.7.2",
     "morgan": "~1.9.1"
