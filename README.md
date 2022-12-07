@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://psv4.userapi.com/c236331/u339427347/docs/d60/86d52ee228af/izobrazhenie_2022-11-30_171423995-removebg-preview.png?extra=XiQ57ibqDqw3sReCy8lr072QpuilAZ_BjX7-VMssRw6Uxj3pPyPVM1xx5qnpH4Rp04xevLBdbYPihER7-iTqF4yZGN1aTmj8c7UXUttav6fgemvRi4zrQU1TUOo41LYpPu8XRzWE0LgqRRUmXGhKcFQleA" alt="solarsystem">
+<img src="https://i.pinimg.com/originals/2b/de/7d/2bde7d14133968f97d6c4dd898edb989.gif" alt="JDM">
 <h1 align="center">Проект MidNightClub</h1>
 </p>
 <br>
