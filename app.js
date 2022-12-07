@@ -7,6 +7,7 @@ var mongoose = require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/midnightclub')
 var session = require("express-session")
 var cars = require('./routes/cars');
+var Car = require("./models/car").Car
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -36,6 +37,17 @@ app.use(function(req,res,next){
   req.session.counter = req.session.counter +1 || 1
   next()
 })
+
+app.use(function(req,res,next){
+  res.locals.nav = []
+
+  Car.find(null,{_id:0,title:1,nick:1},function(err,result){
+      if(err) throw err
+      res.locals.nav = result
+      next()
+  })
+})
+
 
 
 app.use('/', indexRouter);
