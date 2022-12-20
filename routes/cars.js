@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Car = require("../models/car").Car
+var checkAuth = require("./../middleware/checkAuth.js");
 // var async = require("async")
 
 /* GET users listing. */
@@ -11,7 +12,7 @@ router.get('/', function(req, res, next) {
 /* Страница машин */
 
 
-router.get('/:nick', function(req, res, next) {
+router.get('/:nick',checkAuth, function(req, res, next) {
     Car.findOne({nick:req.params.nick}, function(err,car){
         if(err) return next(err)
         if(!car) return next(new Error("There was no such cаr in MidNightClub, maybe you made a mistake in your request? такого героя в этой книжке"))

@@ -19,11 +19,10 @@
                 <a class="nav-link" href="/cars/<%=car.nick%>"><%=car.title%></a>
             </li>
                 <% })} %>
-        <ul class="nav navbar-nav navbar-right">
+            <div class="navbar-nav ms-auto nav navbar-nav navbar-right">
             <%if(user){%>
                 <form action="/logout" method="post">
-                    <li><button type="submit" class="btn btn-
-                                            link">Log Out</button></li>
+                    <button type="submit" class="btn btn-link">Log Out</button>
                 </form>
                    <% } else { %>
                        <li><a href="/logreg">Log In</a></li>
