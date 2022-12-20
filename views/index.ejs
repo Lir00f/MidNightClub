@@ -6,8 +6,12 @@
   </head>
   <body>
     <% layout('./layout/page.ejs') %>
+
     <h1><%= title %></h1>
     <h1>Welcome to <%= title %></h1>
     <p>Счетчик: <%= counter %></p>
+    <% if(user) {%>
+      <% }else{ %>
+       <% } %>
   </body>
 </html>
