@@ -8,21 +8,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <nav class="navbar navbar-expand-sm         bg-danger navbar-dark">
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link active" href="/">Главная</a>
             </li>
             <% if(typeof nav == 'object' && nav){ nav.forEach(function(car){ %>
-                <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="/cars/<%=car.nick%>"><%=car.title%></a>
-                </li>
+            </li>
                 <% })} %>
-                       </ul>
-                       <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/logreg">Войти</a></li>
-                </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <%if(user){%>
+                <form action="/logout" method="post">
+                    <li><button type="submit" class="btn btn-
+                                            link">Log Out</button></li>
+                </form>
+                   <% } else { %>
+                       <li><a href="/logreg">Log In</a></li>
+                   <% } %>
+            </ul>
+        </ul>
     </div>
     </nav>
     <%- body %>
