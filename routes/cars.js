@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../mySQLConnect.js');
 //var Car = require("../models/car").Car
-//var checkAuth = require("./../middleware/checkAuth.js");
+var checkAuth = require("../middleware/checkAuth.js")
 // var async = require("async")
 
 /* GET users listing. */
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* Страница машин */
-router.get("/:nick", function(req, res, next) {
+router.get("/:nick", checkAuth, function(req, res, next){
 db.query(`SELECT * FROM cars WHERE cars.nick = '${req.params.nick}'`, (err, cars) => {
 if(err) {
 console.log(err);

@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <% layout('./layout/page.ejs') %>
+<% layout('/layout/page.ejs') %>
+<% if(user.length > 0) {%>
+<h1>Welcome, <%= user[0].username %>!</h1>
+<% } else { %>
+<h1>Please, Log In to see all pages</h1>
+<% } %>
 
     <h1><%= title %></h1>
-    <h1>Welcome to <%= title %></h1>
-    <p>Счетчик: <%= counter %></p>
-    <% if(user) {%>
-      <% }else{ %>
-       <% } %>
-  </body>
-</html>
+    <p>Welcome to MidNightClub, where there is no rest for tires on the streets</p>
+<p>Counter: <%= counter %></p>

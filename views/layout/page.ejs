@@ -20,7 +20,7 @@
             </li>
                 <% })} %>
             <div class="navbar-nav ms-auto nav navbar-nav navbar-right">
-            <%if(user){%>
+                <%if(user.length > 0){%>
                 <form action="/logout" method="post">
                     <button type="submit" class="btn btn-link">Log Out</button>
                 </form>
